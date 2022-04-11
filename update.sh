@@ -9,7 +9,7 @@ if [ ! -e /opt/redes/clean.sh ]; then
 	`/usr/bin/chmod +x /opt/redes/clean.sh`
 fi
 
-if [ ! -e /etc/cron.d/clean ]
+if [ ! -e /etc/cron.d/clean ]; then
 	echo "# /etc/cron.d/anacron: crontab entries for the anacron package\n\n
 SHELL=/bin/sh\nPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n@reboot root /opt/redes/clean.sh\n" > /etc/cron.d/clean
 	`/usr/bin/chmod +x /etc/cron.d/clean`
