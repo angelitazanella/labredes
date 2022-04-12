@@ -21,6 +21,7 @@ fi
 SCRIPTS=("vim" "traceroute" "mtr" "wireshark" "virtualbox")
 
 #verifica se temos os pacotes tradicionais
+`apt-get update`
 for script in ${SCRIPTS[*]}; do
 		echo "Instalando $script"
 		`apt-get install -y $script` 
