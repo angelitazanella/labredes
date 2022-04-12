@@ -34,9 +34,6 @@ SCRIPTS=("vim" "traceroute" "mtr" "wireshark" "virtualbox")
 
 #verifica se temos os pacotes tradicionais
 for script in ${SCRIPTS[*]}; do
-	inst=`apt list $script --installed | wc -l`
-	if [ $inst -gt 1 ]; then 
 		echo "Instalando $script"
 		`apt-get install -y $script` 
-	fi 
 done
