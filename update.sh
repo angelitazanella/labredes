@@ -18,7 +18,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 	`/usr/bin/chmod +x /etc/cron.d/clean`
 fi
 
-if [ ! -e /home/aluno/PacketTracer.desktop ]; then
+if [ ! -e /home/aluno/Área\ de\ Trabalho/PacketTracer.desktop ]; then
 echo"
 [Desktop Entry]
 Version=1.0
@@ -27,7 +27,9 @@ Type=Application
 Exec=packettracer
 Icon=/opt/pt/art/app.png
 MimeType=application/x-pkz;application/x-pksz;application/x-pka;application/x-pkt;application/x-pks;x-scheme-handler/pttp
-" > /home/aluno/PacketTracer.desktop
+" > /home/aluno/Área\ de\ Trabalho/PacketTracer.desktop 
+chown aluno.aluno /home/aluno/Área\ de\ Trabalho/PacketTracer.desktop 
+chmod +x /home/aluno/Área\ de\ Trabalho/PacketTracer.desktop 
 fi
 
 SCRIPTS=("vim" "traceroute" "mtr" "wireshark" "virtualbox")
