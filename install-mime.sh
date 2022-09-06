@@ -4,6 +4,12 @@ echo "application/x-pkz=packettarcer.desktop;
 application/x-pkt=packettarcer.desktop;
 application/x-pka=packettarcer.desktopi">>/usr/share/applications/mimeinfo.cache
 
+echo "application/x-pkz=packettracer.desktop
+application/x-pksz=packettracer.desktop
+application/x-pka=packettracer.desktop
+application/x-pkt=packettracer.desktop
+application/x-pks=packettracer.desktop" >> /usr/share/applications/defaults.list
+
 echo "[200~[Desktop Entry]
 Version=1.0
 Type=Application
