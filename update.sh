@@ -7,7 +7,8 @@ fi
 if [ ! -e /opt/redes/clean.sh ]; then
 	echo "#!/bin/bash
 find /home/aluno/ -type f -name *.pka -delete
-find /home/aluno/ -type f -name *.pkt -delete" > /opt/redes/clean.sh
+find /home/aluno/ -type f -name *.pkt -delete
+find /home/aluno/ -type f -name *.pkz -delete" > /opt/redes/clean.sh
 	`/usr/bin/chmod +x /opt/redes/clean.sh`
 fi
 
@@ -18,7 +19,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 	`/usr/bin/chmod +x /etc/cron.d/clean`
 fi
 
-SCRIPTS=("vim" "traceroute" "mtr" "wireshark" "virtualbox")
+SCRIPTS=("vim" "traceroute" "mtr" "wireshark")
 
 #verifica se temos os pacotes tradicionais
 `apt-get update`
